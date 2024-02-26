@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import { styled } from "styled-components"
 
 const Nav = () => {
-
-  const [show, setShow] = useState("false");  
+  const [show, setShow] = useState("false");
 
   const listener = () => {
-    if (window.scrollY > 50) {
+    if(window.scrollY > 50) {
         setShow("true");
     } else {
         setShow("false");
@@ -14,19 +13,20 @@ const Nav = () => {
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', listener);
+    window.addEventListener("scroll", listener);
+
     return () => {
-        window.removeEventListener('scroll', listener);
+        window.removeEventListener("scroll", listener);
     }
   }, [])
-  
+
   return (
     <NavWrapper show={show}>
         <Logo>
-            <img 
+            <img
                 alt="logo"
                 src="/images/apple-logo.png"
-                onClick={() => (window.location.href="/")}
+                onClick={() => (window.location.href = "/")}
             />
         </Logo>
     </NavWrapper>
@@ -39,7 +39,6 @@ const Logo = styled.a`
     font-size: 0;
     display: inline-block;
     margin-bottom: 10px;
-
     img {
         display: block;
         width: 100%;
@@ -52,12 +51,12 @@ const NavWrapper = styled.nav`
     left: 0;
     right: 0;
     height: 70px;
-    background-color: ${props => props.show === "true" ? "#000000": "#000000"};
+    background-color: ${props => props.show === "true" ? "#000000" : "#000000"};
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 36px;
-    letter-spaceing: 16px;
+    letter-spacing: 16px;
     z-index: 3;
 `
 
