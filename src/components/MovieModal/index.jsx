@@ -1,8 +1,8 @@
-import { imageBasePath } from "../../constant"
+import { imageBasePath } from '../../constant';
 import './MovieModal.css'
 
 const MovieModal = ({
-    backgrop_path,
+    backdrop_path,
     title, 
     overview,
     name,
@@ -23,7 +23,7 @@ const MovieModal = ({
 
                 <img 
                     className="modal__poster-img"
-                    src={`${imageBasePath}${backgrop_path}`}
+                    src={`${imageBasePath}${backdrop_path}`}
                     alt="modal_poaster-img"
                 />
 
@@ -37,8 +37,8 @@ const MovieModal = ({
                 <h2 className="modal__title">
                     {title ? title : name}
                 </h2>
-                <p clasName="modal__overview">평점: {vote_average}</p>
-                <p clasName="modal__overview">{overview}</p>
+                <p className="modal__overview">평점: {vote_average}</p>
+                <p className="modal__overview">{overview}</p>
                 </div>
             </div>
         </div>
@@ -46,4 +46,4 @@ const MovieModal = ({
   )
 }
 
-export default index
+export default MovieModal

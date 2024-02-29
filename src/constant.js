@@ -1,1 +1,1 @@
-const imageBasePath = 'https://image.tmdb.org/t/p/original';
+export const imageBasePath = 'https://image.tmdb.org/t/p/original';
